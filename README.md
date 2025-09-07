@@ -13,7 +13,7 @@ Froggi is a web-based scoreboard management system built with Axum (Rust). It pr
 
 The system uses session-based authentication with two middleware layers:
 - **auth_give_session_layer**: Provides session data to handlers
-- **auth_session_layer**: Requires valid session for access
+- **auth_session_layer**: Requires valid session for access, you MUST send an http header.
 
 ## Base URL Structure
 
