@@ -298,3 +298,6 @@ Public access endpoints for frontend resources:
 - **GET /local-asset/{directory}/{asset}** - Local asset files
 
 ---
+
+> [!IMPORTANT]  
+> Popups do not currently have an api
