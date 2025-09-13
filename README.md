@@ -1,5 +1,7 @@
 # Froggi API Documentation
 
+
+
 ## Overview
 
 Froggi is a web-based scoreboard management system built with Axum (Rust). It provides endpoints for managing game scoreboards, team information, sponsors, and overlay displays.
@@ -31,6 +33,7 @@ Displays downs information in different formats.
 - `type` (required): Display format
   - `down` - Shows just downs
   - `togo` - Shows just yards to go
+
   - `both` - Shows both in "# & #" format (e.g., "3rd & 30")
 
 **Example:**
@@ -62,9 +65,13 @@ Logs out the current user and destroys the session.
 ## Dashboard & Core Pages
 
 ### GET /
+
+
 Main dashboard page (requires authentication).
 
 ### GET /teaminfo
+
+
 Team information management page (requires authentication).
 
 ### GET /settings
@@ -80,26 +87,48 @@ System logs page (requires authentication).
 All game clock endpoints require authentication.
 
 ### POST /game-clock/ctl/{operation}
+
+
+
 Controls game clock operations.
 - `operation`: `start`, `stop`, `pause`, or `reset`
 
 ### POST /game-clock/set/{mins}/{secs}
+
+
 Sets the game clock to specific time.
 - `mins`: Minutes (0-99)
+
+
 - `secs`: Seconds (0-59)
 
 ### POST /game-clock/set-mins/{mins}
+
+
+
 Sets only the minutes on the game clock.
 
 ### POST /game-clock/set-secs/{secs}
 Sets only the seconds on the game clock.
 
 ### POST /game-clock/update/{mins}/{secs}
+
 Updates the game clock by adding/subtracting time.
 
 ### GET /game-clock/display/{format}
 Displays the current game clock time.
 - `format`: Display format option
+
+- ### GET /game-clock/display/{format}
+Displays the current game clock time.
+
+- `format` (required): Display format option  
+  - `minutes` – Shows just the minutes on the game-clock
+
+  - `seconds` – Shows just the seconds on the game-clock
+
+
+  - `both` – Shows both in `XX:XX` format (e.g., `5:09`)
 
 ---
 
@@ -108,6 +137,8 @@ Displays the current game clock time.
 All countdown clock endpoints require authentication.
 
 ### POST /countdown-clock/ctl/{operation}
+
+
 Controls countdown clock operations.
 
 ### POST /countdown-clock/set/{mins}/{secs}
@@ -301,3 +332,17 @@ Public access endpoints for frontend resources:
 
 > [!IMPORTANT]  
 > Popups do not currently have an api
+
+
+
+
+
+
+
+
+
+
+
+
+
+
